@@ -103,7 +103,7 @@
         for index, i in enumerate(self.spinbox_values):
             if self.spinbox_variable.get() == i:
                 self.label_miniature .config(image= self.Miniatures[index])
-                
+                self.spinbox.icursor(END)
 ###############################           
 
     def gear_stacking(self):   # SE ACTIVA CON LA RUEDA DE CONFIGURACIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
