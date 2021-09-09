@@ -76,7 +76,7 @@
         self.frm_C1 = Frame (self, bg='green2', width=60, height=65)
         self.frm_C1 .grid_propagate(False)
 
-########self.label_miniature = Label (self.frm_C1, imagen= self.Miniatures[0], bd= 0)
+########self.label_miniature = Label (self.frm_C1, image= self.Miniatures[0], bd= 0)
 ########self.label_miniature . grid (padx= , pady= )
         
         self.spinbox_variable = StringVar()
