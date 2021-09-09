@@ -76,7 +76,7 @@
         self.frm_C1 = Frame (self, bg='green2', width=60, height=65)
         self.frm_C1 .grid_propagate(False)
 
-########self.label_miniature = Label (self.frm_C1, imagen= , bd= 0)
+########self.label_miniature = Label (self.frm_C1, imagen= self.Miniatures[0], bd= 0)
 ########self.label_miniature . grid (padx= , pady= )
         
         self.spinbox_variable = StringVar()
@@ -95,14 +95,16 @@
         label_title .grid (column= 0, row=0, padx=10, pady=(10,5), sticky= W)
 
         self.spinbox .grid (column= 0, row=1, padx=10, pady=(0,6), sticky= W)
-     
+
+
+###############################     
     def change_miniature(self):
 
         for index, i in enumerate(self.spinbox_values):
             if self.spinbox_variable.get() == i:
-#######         self.label_miniature .config(image= self.Miniatures[index])
+                self.label_miniature .config(image= self.Miniatures[index])
                 
-           
+###############################           
 
     def gear_stacking(self):   # SE ACTIVA CON LA RUEDA DE CONFIGURACIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
 
@@ -138,12 +140,9 @@
         right = [Frog_right, Fox_right, Boomer_right, Ice_right, Jd_right, Grub_right, Lightning_right, Aduka_right, Knight_right, Kalsiddon_right, Mage_right, Randomizer_right, Jolteon_right, Turtle_right, Armor_right, Asate_right, Raon_right, Trico_right, Nak_right, Bigfoot_right, Dragon1_right, Dragon2_right]
         stuf = [Frog_stuf, Fox_stuf, Boomer_stuf, Ice_stuf, Jd_stuf, Grub_stuf, Lightning_stuf, Aduka_stuf, Knight_stuf, Kalsiddon_stuf, Mage_stuf, Randomizer_stuf, Jolteon_stuf, Turtle_stuf, Armor_stuf, Asate_stuf, Raon_stuf, Trico_stuf, Nak_stuf, Bigfoot_stuf, Dragon1_stuf, Dragon2_stuf]
 
-####### lista de img : self.Miniaturas de 0 a 21
-#######
         for index, i in enumerate(self.spinbox_values):
             if self.spinbox.get() == i:  #### porque no usar self.spinbox_variable????
-                self.windows_123(left[index], right[index], stuf[index]) 
-#######         self.Label_miniature .config (image= self.Miniature[index])
+                self.windows_123(left[index], right[index], stuf[index])
                 
 
     def configure_height (self):  # Metodo DESABILITADO
