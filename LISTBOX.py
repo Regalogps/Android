@@ -81,6 +81,8 @@
         
         self.spinbox_variable = StringVar()
         self.spinbox_variable .trace_add ('write', lambda *arg: self.spinbox_variable.set (self.spinbox_variable.get() .capitalize()))  # SE ACTIVA SI INTRODUCE TEXTO: CAMBIA POR MAYUSCULA
+########self.spinbox_variable .trace_add ('write', self.change_miniature)
+
         label_title = Label (self.frm_B3, text='Seleccione  Mobil :', font=('Calibri',9,'bold'), bg='#31343a', fg='white', bd=0)
 
         self.spinbox_values = ['Frog', 'Fox', 'Boomer', 'Ice', 'J.d', 'Grub', 'Lightning', 'Aduka', 'Knight', 'Kalsiddon', 'Mage', 'Randomizer', 'Jolteon', 'Turtle', 'Armor','A.sate', 'Raon', 'Trico', 'Nak', 'Bigfoot', 'Dragon 1', 'Dragon 2']
@@ -94,7 +96,12 @@
 
         self.spinbox .grid (column= 0, row=1, padx=10, pady=(0,6), sticky= W)
      
-    def mini(self):
+    def change_miniature(self):
+
+        for index, i in enumerate(self.spinbox_values):
+            if self.spinbox_variable.get() == i:
+#######         self.label_miniature .config(image= self.Miniatures[index])
+                
            
 
     def gear_stacking(self):   # SE ACTIVA CON LA RUEDA DE CONFIGURACIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
@@ -134,7 +141,7 @@
 ####### lista de img : self.Miniaturas de 0 a 21
 #######
         for index, i in enumerate(self.spinbox_values):
-            if self.spinbox.get() == i:
+            if self.spinbox.get() == i:  #### porque no usar self.spinbox_variable????
                 self.windows_123(left[index], right[index], stuf[index]) 
 #######         self.Label_miniature .config (image= self.Miniature[index])
                 
