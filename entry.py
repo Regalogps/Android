@@ -52,7 +52,7 @@ toppings = ["Pepperoni", "Peppers", "Mushrooms", "Cheese", "Onions", "Ham", "Tac
 # Add the toppings to our list
 update(toppings)
 
-my_list.bind("<>", fillout)
-my_entry.bind("", check)
+my_list.bind("<<ListboxSelect>>", fillout)
+my_entry.bind("<KeyRelease>", check)
 
 root.mainloop()
