@@ -34,36 +34,25 @@ def check(e):
 		for item in toppings:
 			if typed.lower() in item.lower():
 				data.append(item)
-
-	# update our listbox with selected items
 	update(data)				
 
 
-# Create a label
 my_label = Label(root, text="Start Typing...",
 	font=("Helvetica", 14), fg="grey")
-
 my_label.pack(pady=20)
 
-# Create an entry box
 my_entry = Entry(root, font=("Helvetica", 20))
 my_entry.pack()
 
-# Create a listbox
 my_list = Listbox(root, width=50)
 my_list.pack(pady=40)
 
-# Create a list of pizza toppings
-toppings = ["Pepperoni", "Peppers", "Mushrooms",
-	"Cheese", "Onions", "Ham", "Taco"]
+toppings = ["Pepperoni", "Peppers", "Mushrooms", "Cheese", "Onions", "Ham", "Taco"]
 
 # Add the toppings to our list
 update(toppings)
 
-# Create a binding on the listbox onclick
 my_list.bind("<>", fillout)
-
-# Create a binding on the entry box
 my_entry.bind("", check)
 
 root.mainloop()
