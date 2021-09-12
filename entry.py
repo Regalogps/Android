@@ -5,8 +5,8 @@ root.title('Codemy.com - Auto Select/Search')
 root.iconbitmap('c:/gui/codemy.ico')
 root.geometry("500x300")
 
-# Update the listbox
-def update(data):
+
+def update(data):     # LISTBOX
 	# Clear the listbox
 	my_list.delete(0, END)
 
@@ -14,17 +14,16 @@ def update(data):
 	for item in data:
 		my_list.insert(END, item)
 
-# Update entry box with listbox clicked
-def fillout(e):
-	# Delete whatever is in the entry box
+
+def fillout(e):      # LISTBOX ENTRY
+	
 	my_entry.delete(0, END)
 
 	# Add clicked list item to entry box
 	my_entry.insert(0, my_list.get(ANCHOR))
+ 
+def check(e):        # LISTBOX
 
-# Create function to check entry vs listbox
-def check(e):
-	# grab what was typed
 	typed = my_entry.get()
 
 	if typed == '':
