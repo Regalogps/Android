@@ -1650,15 +1650,18 @@ class Interface(Frame, MoveAllCls):
     # Tareas:
     #    1- Permitir la apertura de las ventanas secundarias en la siguiente llamada
     #    2- Desactiva la seleccion del boton en la interface de botones
-    def closing_toplevel(self,  number, event):
+    def closing_toplevel(self,  number, event=None):
         
         if isinstance(event.widget, Toplevel):
-            if number == 1:
+            if number == 1 or :
                 self._open_1 = False
+                self.toplevel_LEFT.destroy()
             if number == 2:
                 self._open_2 = False
+                self.toplevel_RIGHT.destroy()
             if number == 3: 
                 self._open_3 = False
+                self.toplevel_STUF.destroy()
 
             if not self._open_1 == True and not self._open_2 == True and not self._open_3:
                 try:  # Esto se ejecuta ademas de la condicion, cuando cierra de emproviso la aplicacion con ventanas secundarias. abiertas
