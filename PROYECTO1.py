@@ -1425,7 +1425,7 @@ class Interface(Frame, MoveAllCls):
         ouput = os.listdir(file)
 
         if option == 'I':
-            multilist = [[] for x in range(22)]
+            multilist = [[]]*22
             mobiles = ['Fro','Fox','Boo','Ice','JD','Gru','Lig','Adu','Kni','Kal','Mag','Ran','Jol','Tur','Arm','Asa','Rao','Tri','Nak','Big','Bar','Dra']
 
             for i in ouput:
